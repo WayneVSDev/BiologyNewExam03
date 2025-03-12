@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Mock Test with Diagrams 03 - Grade 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .question h3 {
+            margin-top: 0;
+            color: #0066cc;
+            font-size: 1.2em;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .short-answer {
+            width: 100%;
+            height: 120px;
+            margin-top: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .check-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .check-btn:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .explanation {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .explanation img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Biology Mock Test with Diagrams 03 – Grade 11</h1>
+    <p style="text-align: center; color: #555;">Test your knowledge and learn with diagrams! Answer each question and click "Check" for feedback.</p>
+
+    <div id="questions">
+        <!-- Multiple-Choice Questions -->
+        <div class="question" id="q1">
+            <h3>1. During which phase of mitosis do chromosomes align at the metaphase plate?</h3>
+            <div class="options">
+                <input type="radio" name="q1" value="a"> a) Prophase<br>
+                <input type="radio" name="q1" value="b"> b) Metaphase<br>
+                <input type="radio" name="q1" value="c"> c) Anaphase<br>
+                <input type="radio" name="q1" value="d"> d) Telophase<br>
+            </div>
+            <button class="check-btn" data-question="q1">Check</button>
+            <div class="result" id="result-q1"></div>
+        </div>
+
+        <div class="question" id="q2">
+            <h3>2. What is the role of cyclin-dependent kinases (CDKs) in the cell cycle?</h3>
+            <div class="options">
+                <input type="radio" name="q2" value="a"> a) To break down the nuclear envelope<br>
+                <input type="radio" name="q2" value="b"> b) To regulate the progression through cell cycle checkpoints<br>
+                <input type="radio" name="q2" value="c"> c) To replicate DNA<br>
+                <input type="radio" name="q2" value="d"> d) To form the mitotic spindle<br>
+            </div>
+            <button class="check-btn" data-question="q2">Check</button>
+            <div class="result" id="result-q2"></div>
+        </div>
+
+        <div class="question" id="q3">
+            <h3>3. Which molecule is the final electron acceptor in the electron transport chain during cellular respiration?</h3>
+            <div class="options">
+                <input type="radio" name="q3" value="a"> a) Glucose<br>
+                <input type="radio" name="q3" value="b"> b) Oxygen<br>
+                <input type="radio" name="q3" value="c"> c) Carbon dioxide<br>
+                <input type="radio" name="q3" value="d"> d) NAD+<br>
+            </div>
+            <button class="check-btn" data-question="q3">Check</button>
+            <div class="result" id="result-q3"></div>
+        </div>
+
+        <div class="question" id="q4">
+            <h3>4. Where does the Calvin cycle take place in a chloroplast?</h3>
+            <div class="options">
+                <input type="radio" name="q4" value="a"> a) Thylakoid membrane<br>
+                <input type="radio" name="q4" value="b"> b) Stroma<br>
+                <input type="radio" name="q4" value="c"> c) Outer membrane<br>
+                <input type="radio" name="q4" value="d"> d) Intermembrane space<br>
+            </div>
+            <button class="check-btn" data-question="q4">Check</button>
+            <div class="result" id="result-q4"></div>
+        </div>
+
+        <div class="question" id="q5">
+            <h3>5. What is the primary source of energy for Earth's climate system, driving photosynthesis?</h3>
+            <div class="options">
+                <input type="radio" name="q5" value="a"> a) Geothermal energy<br>
+                <input type="radio" name="q5" value="b"> b) Solar energy<br>
+                <input type="radio" name="q5" value="c"> c) Nuclear energy<br>
+                <input type="radio" name="q5" value="d"> d) Chemical energy<br>
+            </div>
+            <button class="check-btn" data-question="q5">Check</button>
+            <div class="result" id="result-q5"></div>
+        </div>
+
+        <div class="question" id="q6">
+            <h3>6. What is the purpose of meiosis in sexually reproducing organisms?</h3>
+            <div class="options">
+                <input type="radio" name="q6" value="a"> a) To produce genetically identical daughter cells<br>
+                <input type="radio" name="q6" value="b"> b) To produce gametes with half the chromosome number<br>
+                <input type="radio" name="q6" value="c"> c) To repair damaged DNA<br>
+                <input type="radio" name="q6" value="d"> d) To increase cell size<br>
+            </div>
+            <button class="check-btn" data-question="q6">Check</button>
+            <div class="result" id="result-q6"></div>
+        </div>
+
+        <div class="question" id="q7">
+            <h3>7. Which stage of cellular respiration produces the most ATP?</h3>
+            <div class="options">
+                <input type="radio" name="q7" value="a"> a) Glycolysis<br>
+                <input type="radio" name="q7" value="b"> b) Pyruvate oxidation<br>
+                <input type="radio" name="q7" value="c"> c) Krebs cycle<br>
+                <input type="radio" name="q7" value="d"> d) Electron transport chain and oxidative phosphorylation<br>
+            </div>
+            <button class="check-btn" data-question="q7">Check</button>
+            <div class="result" id="result-q7"></div>
+        </div>
+
+        <div class="question" id="q8">
+            <h3>8. What molecule is produced in the light-dependent reactions of photosynthesis and used in the Calvin cycle?</h3>
+            <div class="options">
+                <input type="radio" name="q8" value="a"> a) Glucose<br>
+                <input type="radio" name="q8" value="b"> b) NADPH<br>
+                <input type="radio" name="q8" value="c"> c) Carbon dioxide<br>
+                <input type="radio" name="q8" value="d"> d) Water<br>
+            </div>
+            <button class="check-btn" data-question="q8">Check</button>
+            <div class="result" id="result-q8"></div>
+        </div>
+
+        <div class="question" id="q9">
+            <h3>9. During which phase of the cell cycle does DNA replication occur?</h3>
+            <div class="options">
+                <input type="radio" name="q9" value="a"> a) G1 phase<br>
+                <input type="radio" name="q9" value="b"> b) S phase<br>
+                <input type="radio" name="q9" value="c"> c) G2 phase<br>
+                <input type="radio" name="q9" value="d"> d) M phase<br>
+            </div>
+            <button class="check-btn" data-question="q9">Check</button>
+            <div class="result" id="result-q9"></div>
+        </div>
+
+        <div class="question" id="q10">
+            <h3>10. What is the primary pigment involved in capturing light energy during photosynthesis?</h3>
+            <div class="options">
+                <input type="radio" name="q10" value="a"> a) Carotene<br>
+                <input type="radio" name="q10" value="b"> b) Chlorophyll<br>
+                <input type="radio" name="q10" value="c"> c) Xanthophyll<br>
+                <input type="radio" name="q10" value="d"> d) Phycocyanin<br>
+            </div>
+            <button class="check-btn" data-question="q10">Check</button>
+            <div class="result" id="result-q10"></div>
+        </div>
+
+        <!-- Short-Answer Questions -->
+        <div class="question" id="q11">
+            <h3>11. a) Describe the stages of mitosis and their key events. b) Explain the significance of mitosis in growth and repair. (8 marks)</h3>
+            <textarea class="short-answer" name="q11"></textarea>
+            <button class="check-btn" data-question="q11">Check</button>
+            <div class="result" id="result-q11"></div>
+        </div>
+
+        <div class="question" id="q12">
+            <h3>12. a) Explain the process of crossing over during meiosis. b) Sketch and describe how crossing over contributes to genetic diversity. (6 marks)</h3>
+            <textarea class="short-answer" name="q12"></textarea>
+            <button class="check-btn" data-question="q12">Check</button>
+            <div class="result" id="result-q12"></div>
+        </div>
+
+        <div class="question" id="q13">
+            <h3>13. a) Describe the light-dependent reactions of photosynthesis. b) Predict what happens to the rate of photosynthesis if light intensity increases, including a simple graph description. (8 marks)</h3>
+            <textarea class="short-answer" name="q13"></textarea>
+            <button class="check-btn" data-question="q13">Check</button>
+            <div class="result" id="result-q13"></div>
+        </div>
+
+        <div class="question" id="q14">
+            <h3>14. a) Compare aerobic and anaerobic respiration in terms of energy yield and end products. b) Describe the role of the electron transport chain in aerobic respiration with an example and a diagram sketch idea. (10 marks)</h3>
+            <textarea class="short-answer" name="q14"></textarea>
+            <button class="check-btn" data-question="q14">Check</button>
+            <div class="result" id="result-q14"></div>
+        </div>
+
+        <div class="question" id="q15">
+            <h3>15. a) Explain how checkpoints regulate the cell cycle. b) Sketch and describe a diagram showing the role of checkpoints in preventing uncontrolled cell division. (10 marks)</h3>
+            <textarea class="short-answer" name="q15"></textarea>
+            <button class="check-btn" data-question="q15">Check</button>
+            <div class="result" id="result-q15"></div>
+        </div>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'b',
+            q4: 'b',
+            q5: 'b',
+            q6: 'b',
+            q7: 'd',
+            q8: 'b',
+            q9: 'b',
+            q10: 'b',
+            q11: `a) Mitosis stages: Prophase (chromosomes condense, spindle forms), Metaphase (chromosomes align at metaphase plate), Anaphase (sister chromatids separate), Telophase (chromosomes decondense, nuclear envelope reforms). b) Mitosis ensures growth by increasing cell number and repair by replacing damaged cells with identical copies.`,
+            q12: `a) Crossing over occurs in prophase I of meiosis, where homologous chromosomes exchange genetic material at chiasmata. b) This increases genetic diversity by producing new combinations of alleles; sketch homologous chromosomes with swapped segments.`,
+            q13: `a) Light-dependent reactions occur in the thylakoid membrane, where light energy excites electrons in chlorophyll, producing ATP and NADPH via photophosphorylation and water splitting. b) Photosynthesis rate increases with light intensity until it plateaus due to saturation; sketch a graph with light intensity (x-axis) vs. rate (y-axis) showing an initial rise then leveling off.`,
+            q14: `a) Aerobic respiration yields 36-38 ATP, producing CO2 and H2O, while anaerobic yields 2 ATP, producing lactate or ethanol. b) The electron transport chain in the inner mitochondrial membrane uses NADH/FADH2 to create a proton gradient, driving ATP synthesis via oxidative phosphorylation; example: oxygen as final electron acceptor; sketch ETC with proton flow and ATP synthase.`,
+            q15: `a) Checkpoints (G1, G2, M) monitor DNA integrity, replication, and spindle assembly to prevent errors. b) They prevent uncontrolled division (cancer) by halting the cycle if errors are detected; sketch a cell cycle circle with checkpoints labeled, showing a stop sign at each checkpoint.`
+        };
+
+        const explanations = {
+            q1: `Metaphase is the stage where chromosomes are pulled by spindle fibers to align at the metaphase plate, ensuring equal division. <img src="data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2250%22%20rx%3D%2230%22%20ry%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2210%22%20x2%3D%2250%22%20y2%3D%2290%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Crect%20x%3D%2245%22%20y%3D%2235%22%20width%3D%2210%22%20height%3D%222%22%20fill%3D%22blue%22/%3E%3Crect%20x%3D%2245%22%20y%3D%2245%22%20width%3D%2210%22%20height%3D%222%22%20fill%3D%22blue%22/%3E%3Crect%20x%3D%2245%22%20y%3D%2255%22%20width%3D%2210%22%20height%3D%222%22%20fill%3D%22blue%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2236%22%20x2%3D%2245%22%20y2%3D%2236%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2270%22%20y1%3D%2236%22%20x2%3D%2255%22%20y2%3D%2236%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2246%22%20x2%3D%2245%22%20y2%3D%2246%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2270%22%20y1%3D%2246%22%20x2%3D%2255%22%20y2%3D%2246%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2256%22%20x2%3D%2245%22%20y2%3D%2256%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2270%22%20y1%3D%2256%22%20x2%3D%2255%22%20y2%3D%2256%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3C/svg%3E" alt="Metaphase diagram" style="width:200px;"> <p><em>Diagram:</em> Chromosomes (blue) aligned at the metaphase plate, attached to spindle fibers (gray).</p>`,
+            q2: `CDKs are enzymes that, when activated by cyclins, phosphorylate proteins to trigger transitions between cell cycle phases, ensuring proper checkpoints. <p><em>Knowledge Point:</em> Checkpoints (e.g., G1/S, G2/M) prevent errors like DNA damage from being passed on, crucial for preventing diseases like cancer.</p>`,
+            q3: `Oxygen accepts electrons at the end of the electron transport chain, forming water and driving ATP synthesis. <p><em>Knowledge Point:</em> Without oxygen, the chain halts, stopping aerobic ATP production, which is why oxygen is essential for life in aerobes.</p>`,
+            q4: `The Calvin cycle, the light-independent phase of photosynthesis, occurs in the stroma, where CO2 is fixed into glucose using ATP and NADPH. <img src="data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2250%22%20rx%3D%2240%22%20ry%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22/%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2250%22%20rx%3D%2235%22%20ry%3D%2235%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2230%22%20r%3D%2210%22%20fill%3D%22green%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2270%22%20r%3D%2210%22%20fill%3D%22green%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2250%22%20r%3D%2210%22%20fill%3D%22green%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2250%22%20r%3D%2210%22%20fill%3D%22green%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2255%22%20text-anchor%3D%22middle%22%20fill%3D%22blue%22%3EStroma%3C/text%3E%3C/svg%3E" alt="Chloroplast diagram" style="width:200px;"> <p><em>Diagram:</em> Chloroplast with stroma (blue) and thylakoids (green).</p>`,
+            q5: `Solar energy powers photosynthesis, converting light into chemical energy stored in glucose, driving Earth’s climate and ecosystems. <p><em>Knowledge Point:</em> Photosynthesis is the basis of the carbon cycle, linking biological and physical systems.</p>`,
+            q6: `Meiosis produces haploid gametes, ensuring genetic diversity and maintaining chromosome number across generations. <p><em>Knowledge Point:</em> Unlike mitosis, meiosis involves two divisions and processes like crossing over, critical for evolution and adaptation.</p>`,
+            q7: `The electron transport chain and oxidative phosphorylation produce the most ATP (up to 34) via a proton gradient. <p><em>Knowledge Point:</em> This stage is highly efficient, making aerobic respiration far more productive than glycolysis alone.</p>`,
+            q8: `NADPH, produced in the light-dependent reactions, provides electrons for the Calvin cycle to reduce CO2 into glucose. <p><em>Knowledge Point:</em> NADPH and ATP are the key outputs linking the two phases of photosynthesis, enabling carbon fixation.</p>`,
+            q9: `DNA replication occurs in the S phase, duplicating the genome before cell division. <p><em>Knowledge Point:</em> This ensures each daughter cell inherits an identical set of genetic material, crucial for mitosis and genetic stability.</p>`,
+            q10: `Chlorophyll absorbs light energy, primarily in the blue and red wavelengths, driving photosynthesis. <p><em>Knowledge Point:</em> Accessory pigments like carotene help capture additional wavelengths, enhancing efficiency.</p>`,
+            q11: `Mitosis is a tightly regulated process ensuring genetic consistency. <img src="data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2250%22%20rx%3D%2230%22%20ry%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22/%3E%3Crect%20x%3D%2245%22%20y%3D%2235%22%20width%3D%2210%22%20height%3D%222%22%20fill%3D%22blue%22/%3E%3Crect%20x%3D%2245%22%20y%3D%2265%22%20width%3D%2210%22%20height%3D%222%22%20fill%3D%22blue%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2236%22%20x2%3D%2245%22%20y2%3D%2236%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2270%22%20y1%3D%2236%22%20x2%3D%2255%22%20y2%3D%2236%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2266%22%20x2%3D%2245%22%20y2%3D%2266%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3Cline%20x1%3D%2270%22%20y1%3D%2266%22%20x2%3D%2255%22%20y2%3D%2266%22%20stroke%3D%22gray%22%20stroke-width%3D%221%22/%3E%3C/svg%3E" alt="Anaphase diagram" style="width:200px;"> <p><em>Diagram:</em> Anaphase, showing sister chromatids (blue) being pulled apart by spindle fibers (gray).</p>`,
+            q12: `Crossing over shuffles alleles, increasing genetic variation, which is essential for evolution. <img src="data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cline%20x1%3D%2220%22%20y1%3D%2220%22%20x2%3D%2220%22%20y2%3D%2280%22%20stroke%3D%22blue%22%20stroke-width%3D%222%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2220%22%20x2%3D%2230%22%20y2%3D%2280%22%20stroke%3D%22red%22%20stroke-width%3D%222%22/%3E%3Cline%20x1%3D%2220%22%20y1%3D%2240%22%20x2%3D%2230%22%20y2%3D%2260%22%20stroke%3D%22blue%22%20stroke-width%3D%222%22/%3E%3Cline%20x1%3D%2220%22%20y1%3D%2260%22%20x2%3D%2230%22%20y2%3D%2240%22%20stroke%3D%22red%22%20stroke-width%3D%222%22/%3E%3C/svg%3E" alt="Crossing over diagram" style="width:200px;"> <p><em>Diagram:</em> Homologous chromosomes (blue and red) exchanging segments during crossing over.</p>`,
+            q13: `Light-dependent reactions capture solar energy, splitting water to produce oxygen, ATP, and NADPH. <p><em>Knowledge Point:</em> The rate of photosynthesis is limited by light intensity, CO2, and temperature, with light intensity showing a saturation curve due to enzyme limitations.</p>`,
+            q14: `Aerobic respiration maximizes energy yield, while anaerobic respiration is less efficient but faster. <img src="data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20x%3D%2210%22%20y%3D%2220%22%20width%3D%2280%22%20height%3D%2220%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%2260%22%20width%3D%2280%22%20height%3D%2220%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22/%3E%3Crect%20x%3D%2240%22%20y%3D%2240%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22gray%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2230%22%20r%3D%224%22%20fill%3D%22purple%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2270%22%20r%3D%224%22%20fill%3D%22purple%22/%3E%3Cline%20x1%3D%2270%22%20y1%3D%2234%22%20x2%3D%2270%22%20y2%3D%2244%22%20stroke%3D%22purple%22%20stroke-width%3D%221%22%20marker-end%3D%22url%28%23arrow%29%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2266%22%20x2%3D%2230%22%20y2%3D%2256%22%20stroke%3D%22purple%22%20stroke-width%3D%221%22%20marker-end%3D%22url%28%23arrow%29%22/%3E%3Cpolygon%20points%3D%2250,70%2060,90%2070,70%22%20fill%3D%22green%22/%3E%3Cdefs%3E%3Cmarker%20id%3D%22arrow%22%20viewBox%3D%220%200%2010%2010%22%20refX%3D%225%22%20refY%3D%225%22%20markerWidth%3D%226%22%20markerHeight%3D%226%22%20orient%3D%22auto%22%3E%3Cpath%20d%3D%22M%200%200%20L%2010%205%20L%200%2010%20z%22%20fill%3D%22purple%22/%3E%3C/marker%3E%3C/defs%3E%3C/svg%3E" alt="ETC diagram" style="width:200px;"> <p><em>Diagram:</em> Electron transport chain with proton (purple) flow and ATP synthase (gray) producing ATP (green).</p>`,
+            q15: `Checkpoints ensure cell division proceeds only when conditions are optimal, preventing mutations. <img src="data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M%2090%2050%20A%2040%2040%200%200%201%2050%2010%22%20fill%3D%22none%22%20stroke%3D%22gray%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M%2050%2010%20A%2040%2040%200%200%201%2010%2050%22%20fill%3D%22none%22%20stroke%3D%22gray%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M%2010%2050%20A%2040%2040%200%200%201%2050%2090%22%20fill%3D%22none%22%20stroke%3D%22gray%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M%2050%2090%20A%2040%2040%200%200%201%2090%2050%22%20fill%3D%22none%22%20stroke%3D%22gray%22%20stroke-width%3D%222%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2210%22%20r%3D%224%22%20fill%3D%22red%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2250%22%20r%3D%224%22%20fill%3D%22red%22/%3E%3Ccircle%20cx%3D%2290%22%20cy%3D%2250%22%20r%3D%224%22%20fill%3D%22red%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%225%22%20text-anchor%3D%22middle%22%3EG1%3C/text%3E%3Ctext%20x%3D%225%22%20y%3D%2255%22%20text-anchor%3D%22middle%22%3EG2%3C/text%3E%3Ctext%20x%3D%2295%22%20y%3D%2255%22%20text-anchor%3D%22middle%22%3EM%3C/text%3E%3C/svg%3E" alt="Cell cycle checkpoints diagram" style="width:200px;"> <p><em>Diagram:</em> Cell cycle with checkpoints (red) at G1, G2, and M phases.</p>`
+        };
+
+        const multipleChoiceQuestions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkButtons = document.querySelectorAll('.check-btn');
+            checkButtons.forEach(button => {
+                const questionId = button.getAttribute('data-question');
+                button.addEventListener('click', () => {
+                    checkAnswer(questionId);
+                });
+            });
+        });
+
+        function checkAnswer(questionId) {
+            const resultDiv = document.getElementById(`result-${questionId}`);
+            const correctAnswer = answers[questionId];
+            let userAnswer, isCorrect;
+
+            if (multipleChoiceQuestions.includes(questionId)) {
+                userAnswer = document.querySelector(`input[name="${questionId}"]:checked`);
+                if (userAnswer === null) {
+                    isCorrect = false;
+                } else {
+                    isCorrect = userAnswer.value === correctAnswer;
+                }
+            } else {
+                userAnswer = document.querySelector(`textarea[name="${questionId}"]`).value.trim().toLowerCase();
+                const keywords = correctAnswer.toLowerCase().split(' ').filter(word => word.length > 3);
+                let matchedKeywords = 0;
+                keywords.forEach(keyword => {
+                    if (userAnswer.includes(keyword)) matchedKeywords++;
+                });
+                isCorrect = matchedKeywords / keywords.length >= 0.8;
+            }
+
+            resultDiv.style.display = 'block';
+            if (isCorrect) {
+                resultDiv.className = 'result correct';
+                resultDiv.innerHTML = `<p>Great job! Your answer is correct.</p>`;
+            } else {
+                resultDiv.className = 'result incorrect';
+                resultDiv.innerHTML = `<p>Oops! That’s not quite right.</p><p><strong>Correct Answer:</strong> ${correctAnswer}</p>`;
+            }
+            resultDiv.innerHTML += `<div class="explanation"><strong>Learn More:</strong> ${explanations[questionId]}</div>`;
+        }
+    </script>
+</body>
+</html>
